@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTTP Client/Server</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #2e2e2e, #444);
+      color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #333;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #ddd;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+
+    input {
+      width: 60%;
+      margin-right: 10px;
+      background: #555;
+      color: #fff;
+    }
+
+    button {
+      background: #666;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #888;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    li {
+      background: #444;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+
+    li:hover {
+      background: #555;
+    }
+
+    li span {
+      cursor: pointer;
+      color: #76b6ff;
+      text-decoration: underline;
+    }
+
+    #progress {
+      width: 100%;
+      height: 16px;
+      background: #555;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    #bar {
+      height: 100%;
+      width: 0;
+      background: #4caf50;
+      transition: width 0.3s;
+    }
+
+    pre {
+      background: #222;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      border: 1px solid #555;
+      color: #ddd;
+      white-space: pre-wrap;
+    }
+
+    .delete-button {
+      background: transparent;
+      border: none;
+      color: #ccc;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .delete-button:hover {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fetch Content by Keyword</h1>
+    <div>
+      <input id="kw" placeholder="Enter keyword" />
+      <button id="search">Search URLs</button>
+    </div>
+
+    <ul id="urls-list"></ul>
+    <div id="progress"><div id="bar"></div></div>
+    <ul id="saved-list"></ul>
+    <pre id="content"></pre>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

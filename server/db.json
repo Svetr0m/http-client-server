@@ -1,0 +1,15 @@
+{
+  "news": [
+    "https://jsonplaceholder.typicode.com/posts/1",
+    "https://jsonplaceholder.typicode.com/posts/2",
+    "https://jsonplaceholder.typicode.com/posts/3"
+  ],
+  "blog": [
+    "https://jsonplaceholder.typicode.com/comments/1",
+    "https://jsonplaceholder.typicode.com/comments/2"
+  ],
+  "weather": [
+    "https://jsonplaceholder.typicode.com/users/1",
+    "https://jsonplaceholder.typicode.com/users/2"
+  ]
+}
